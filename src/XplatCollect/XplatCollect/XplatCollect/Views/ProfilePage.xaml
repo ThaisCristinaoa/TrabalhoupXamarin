@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage 
+     xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
    xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
               prism:ViewModelLocator.AutowireViewModel="True" 
     xmlns="http://xamarin.com/schemas/2014/forms"
@@ -7,12 +8,101 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="XplatCollect.Views.ProfilePage">
+             x:Class="XplatCollect.Views.ProfilePage"
+      Title="Rick Morty">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+       
+            <ContentView Padding="32, 16, 32, 16">
+              
+                <ScrollView>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="120"/>
+                            <RowDefinition Height="120"/>
+                            <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Row="0"
+                              Grid.Column="0"
+                              Grid.RowSpan="2"
+                             
+                              Aspect="AspectFill"
+                              Source="https://www.contragrife.com/wp-content/uploads/2018/02/06488.png"/>
+                    <Label 
+                          Grid.Row="0"
+                          Grid.Column="1"
+                          Text="144"
+                          Margin="32"
+                          FontSize="22"
+                         FontAttributes="Bold" 
+                          LineBreakMode="WordWrap"/>
+                    <Label 
+                          Grid.Row="0"
+                          Grid.Column="1"
+                          Text="Coleções"
+                          VerticalOptions="End" 
+                          HorizontalOptions="Start" 
+                          Margin="32"
+                          FontSize="22" 
+                          FontAttributes="Bold" 
+                          LineBreakMode="WordWrap"/>
+                        <Label 
+                          Grid.Row="1"
+                          Grid.Column="1"
+                          Text="itens"
+                          VerticalOptions="End" 
+                          HorizontalOptions="Start" 
+                          Margin="32"
+                          FontSize="22" 
+                          FontAttributes="Bold" 
+                          />
+                    <Label 
+                          Grid.Row="1"
+                          Grid.Column="1"
+                          Text="517"
+                          Margin="32"
+                          FontSize="22"
+                         FontAttributes="Bold" 
+                          LineBreakMode="WordWrap"/>
+
+                    <Label 
+                          Grid.Row="2"
+                          Grid.Column="0"
+                         Grid.ColumnSpan="2"
+                          Text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+                          VerticalOptions="End" 
+                          HorizontalOptions="Start" 
+                          FontSize="16" 
+                          FontAttributes="Bold" 
+                          LineBreakMode="WordWrap"/>
+                    <Label 
+                          Grid.Row="3"
+                          Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                          Text="Minhas Coleções"
+                          Margin="32"
+                          FontSize="36"
+                         FontAttributes="Bold" 
+                          LineBreakMode="WordWrap"/>
+                    <Image Grid.Row="4"  Grid.Column="0"
+                        Grid.ColumnSpan="2" Aspect="AspectFill" Source="https://ciatoy.vteximg.com.br/arquivos/ids/168631-1000-1000/MATFRN33000CADD_1.jpg?v=636657945574470000" />
+                    
+                    <Label Grid.Row="4"  Grid.Column="0"  Grid.ColumnSpan="2" 
+                           Text="Hot Wheels" TextColor="#000000"
+                               VerticalOptions="End" HorizontalOptions="Start" Margin="32"
+                               FontSize="26" 
+                               FontAttributes="Bold" 
+                               LineBreakMode="WordWrap"/>
+
+                </Grid>
+                </ScrollView>
+            
+           </ContentView>
+       
     </ContentPage.Content>
 </ContentPage>

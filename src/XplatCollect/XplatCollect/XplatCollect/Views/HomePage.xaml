@@ -17,7 +17,7 @@
             SelectionChangedCommand="{Binding ViewColletionCommand}">
             <CollectionView.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
-                    <x:String>Hot Wheels asdadsas asdda asdsad sd</x:String>
+                    <x:String>Hot Wheels</x:String>
                     <x:String>Action Figures</x:String>
                     <x:String>Coins</x:String>
                     <x:String>Caps</x:String>
